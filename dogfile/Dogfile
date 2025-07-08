@@ -1,0 +1,20 @@
+FROM auto_pak_python IMPORT &&all
+
+WORK in ROOT -dir 
+
+REQUE:
+    python 
+    python3
+    python-argparse
+    python-sys
+    python-os
+    pylib 
+    pywin
+    pylinux
+
+pydog --requirements ~prnt::/dogfile/dogfile
+ROOT -p 1234 
+get ROOT as dogroot
+init dogroot 
+watch dogroot
+loopengine -run loop
